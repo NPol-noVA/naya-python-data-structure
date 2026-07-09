@@ -8,7 +8,7 @@ from functions import (
 products = {  'laptop' :{ 'price': 10000, 'quantity': 400 },
               'iPod'   :{'price': 4400, 'quantity': 100},
               'iPad'   : { 'price': 4800, 'quantity': 500},
-              'screen' : {'price': 1000, 'quantity': 87}, 
+              'speaker': {'price': 1000, 'quantity': 87}, 
            } 
 
 
