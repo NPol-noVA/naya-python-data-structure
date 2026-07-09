@@ -12,8 +12,11 @@ def put_product (name, quantity, price) :
     }
  
 #a function for canceling a product from list
-def cancel_product ( name): 
-    products.pop('name')
+def cancel_product(name):
+    if name in products:
+        products.pop(name)
+    else:
+        print("Product not found.")
 
 #a function for changing quantity of a product  
 def update_quantity (pname,newquantity):
@@ -58,31 +61,29 @@ o = input()
 
 
 while o == 'y': 
-     if o == 'y':
-        
-        list_options()
-    
-      print ("enter 1,2,3,4,5 for your options  ")
-      x=input()
+       
+     list_options()
+     print ("enter 1,2,3,4,5 for your options  ")
+     x = input()
     
     if x == '1': 
-        print (products)
+        for name, info in products.items():
+            print(f"{name}: Price = {info['price']}, Quantity = {info['quantity']}")
     
     elif x == '2':
         print("what is product's name?") 
         sname = input( 'name: ')
         print ("what is product's quantity?")
-        squantity = input ( 'quantity: ') 
+        squantity = int(input ( 'quantity: '))
         print( "what is product's price? ") 
-        sprice = input ('price: ') 
-
-        put_product(sname, sprice, squantity) 
+        sprice = float(input ('price: '))
+        put_product(sname, squantity, sprice) 
     
     elif x == '3':
         print ("what product you want to update ? ") 
         s = input()
         print ("what is new quantity?") 
-        new_quantity = input("new quantity: ") 
+        new_quantity = int( input("new quantity: "))
         update_quantity(s, new_quantity)
     
     elif x == '4':
@@ -96,7 +97,7 @@ while o == 'y':
         cancel_product(s) 
         
     print("enter y to continue else type n ") 
-    s = input()
+    o = input()
     if o == 'n': 
       print (" ----Exit!----")   
       break  
