@@ -4,28 +4,28 @@ from functions import (
     list_options,
     search_prod, update_quantity,)
 
-products = {  'laptop' :{ 'price': 10000, 'quantity': 400 },
-              'iPod'   :{'price': 4400, 'quantity': 100},
-              'iPad'   : { 'price': 4800, 'quantity': 500},
-              'screen' : {'price': 1000, 'quantity': 87}, 
-           } 
 
 products = {  'laptop' :{ 'price': 10000, 'quantity': 400 },
               'iPod'   :{'price': 4400, 'quantity': 100},
               'iPad'   : { 'price': 4800, 'quantity': 500},
               'screen' : {'price': 1000, 'quantity': 87}, 
            } 
+
+
 print( "Have a nice trial! welcome to this  inventory-management-system  ") 
 print( "to show list-options enter y ") 
 o = input() 
 
 
 while o == 'y': 
+    
+    
     if o == 'y':
         list_options()
     print ("enter 1,2,3,4,5 for your options  ")
     x=input()
  
+    
     if x == '1': 
         print (products)
     
