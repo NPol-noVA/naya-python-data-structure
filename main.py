@@ -2,7 +2,7 @@ from functions import (
     put_product,
     cancel_product,
     list_options,
-    search_product, update_quantity,)
+    search_prod, update_quantity,)
 
 products = {  'laptop' :{ 'price': 10000, 'quantity': 400 },
               'iPod'   :{'price': 4400, 'quantity': 100},
