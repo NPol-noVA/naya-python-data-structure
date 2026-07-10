@@ -25,15 +25,9 @@ while o == 'y' or 'Y':
     
 
     elif x == '3':
-
-        while k == '0':
-               k == '1'
-               print ("what product you want to update ? ") 
-               s = input()
-               if search_prod(s) == False:
-                      print( "there's no", s, "in product's list shown")  
-                      k == '0'
-               
+    
+        print ("what product you want to update ? ")
+        s = input() 
         print ("what is new quantity?") 
         new_quantity = int( input("new quantity: "))
         update_quantity(s, new_quantity)
@@ -42,23 +36,16 @@ while o == 'y' or 'Y':
        
         print ("what is product's name you want to search for ?") 
         s = input ()
-        if search_prod (s) : 
-               print( s, "is in products' list") 
-        else: 
-               print( s, "isn't in products' list")
-   
-     elif x == '5': 
-           while k == '0':
-                  k == '1'
-                  print ("what product you want to omit ? ") 
-                  s = input()
-                  if search_prod(s) == False:
-                         print( "there's no", s, "in product's list shown")  
-                         k == '0'
-           cancel_product(s)
+        
+        search_prod(s)
+     
+    elif x == '5': 
+        print ("what product you want to omit ? ") 
+        s = input()
+        cancel_product(s)
     
-     print("enter y to continue else type n ") 
-     o = tolower(input())
-     if o == 'n': 
-            print (" ----Exit!----")   
-            break  
+    print("enter y to continue else type n ") 
+    o = tolower(input())
+    if o == 'n': 
+        print (" ----Exit!----")   
+        break  
