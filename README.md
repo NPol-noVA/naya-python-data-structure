@@ -106,6 +106,18 @@ python app.py
 
 ---
 
-## Author
+## error handelding and debugging: 
+I have put everything with error handeling in my first assignment so it was not required big changes
+I only : 
+change  
 
-Created as part of the **Naya Python Data Structures** practice assignment.
+    while o != 'y' or o != 'Y': 
+        o= input ()
+    while o == 'y' or o == 'Y': 
+        /block
+change: 
+s= input to s= tolower(input()) 
+because there's case sensetivity 
+
+that is all because i have previousely avoid error from users and searched for each input before making operations
+inputs were also accurate: int , float, were assigned to their variable to avoid problems
